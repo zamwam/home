@@ -1,38 +1,130 @@
+@media (max-width: 782px) {
+
+}
+* {
+    box-sizing: border-box;
+}
 .gray {
     width: 100%;
-    background-color: #0000009f;
-    color: #00000000;
+    background-color: #000000;
+    color: #000000bd;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: #000000;
 }
 html {
+    font-size: 22px;
     scroll-behavior: smooth;
     height: 100%;
 }
 body {
     background-color: #333333;
-    border: 5px solid black;
 }
 #myIframe {
     background-color: black;
     width: 100%;
+    border: none;
     height: 60vw;
-}
-.main main button {
-    zoom: 110%;
-    width: 20%;
-    height: 50px;
-    margin: 5px;
-    padding: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 0px;
-    margin: 5px;
-    background-color: #4e4d4d;
 }
 .main main button:hover {
     background-color: #555;
 }
 .frame {
+    width: 200px;
+    height: 300px;
     margin: 0;
     padding: 0;
-    display: none;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #1c1c1c;
+}
+.filler {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px; 
+}
+.filler a {
+    min-height: 60px;
+    text-align: center;
+    border: 2px solid #000000;
+    background-color: #111111e3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+.filler a:hover {
+    transform: scale(1.07);
+}
+.filler .frame img {
+    width: 100%; 
+    object-fit: cover; 
+    border-radius: 10px; 
+}
+@media (max-width: 768px) {
+    .grid {
+        padding: 2px;
+        margin: 2px;
+    }
+  }
+.audio-player {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 400px;
+    background-color: #00000000;
+    padding: 10px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0000001a;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.playlist {
+    background-color: #41414175;
+    border: 2px solid #000;
+    width: auto;
+    height: 700px;
+    overflow: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-wrap: wrap;
+}
+#playlist li {
+    margin: 2.2px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid #000;
+    min-width: 45%;
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+#playlist li:hover {
+    background-color: #ddd;
+}
+#playlist li.highlight {
+    background-color: #41414175;
+}
+.grid {
+    flex-wrap: wrap;
 }
