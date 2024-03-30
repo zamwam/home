@@ -31,12 +31,14 @@
     <div><!--main-->
         <main>
             <div class="audio-player" preload="auto">
+                <div style="color: white;" id="currentSongTitle"></div>
                 <audio id="audio" src="" controls hidden></audio>
                 <div id="currentSongTitle"></div>
                 <div class="controls">
                     <button id="playPauseBtn">&#9658;</button>
                     <input type="range" id="progress" value="0">
                     <input type="range" id="volume" value="110" max="110">
+                    <button id="shuffleBtn">Shuffle</button>
                 </div>
             </div>
             <div class="playlist" preload="auto">
@@ -158,7 +160,6 @@
                     <li data-src="https://xkxng.github.io/quake.github.io/Leaks/In My Bag.mp3">In My Bag</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Leaks/Infatuated.mp3">Infatuated</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/5 AM.mp3">5 AM</li>
-                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/6.mp3">6</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/8 minute freestyle.mp3">8 minute freestyle</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/All Girls Are The Same [Apple Music Exclusive].mp3">All Girls Are The Same</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/All Of Me.mp3">All Of Me</li>
@@ -193,7 +194,6 @@
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Devil Horns.mp3">Devil Horns</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Drugs Are My Friends.mp3">Drugs Are My Friends</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Dumb Slut.mp3">Dumb Slut</li>
-                    <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Electric Chair.mp3">Electric Chair</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Empty Acapella.mp3">Empty Acapella</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Fast Forward.mp3">Fast Forward</li>
                     <li data-src="https://xkxng.github.io/quake.github.io/Unreleased-2/Fire In My Lungs.mp3">Fire In My Lungs</li>
@@ -351,7 +351,6 @@
                     <li data-src="https://zamwam.github.io/jwmp3/06 - Juice WRLD - Underworld.mp3">Underworld</li>
                     <li data-src="https://zamwam.github.io/jwmp3/07 - Candles.mp3">Candles</li>
                     <li data-src="https://zamwam.github.io/jwmp3/07 - Starstruck.mp3">Starstruck</li>
-                    <li data-src="https://zamwam.github.io/jwmp3/08 - Juice WRLD - Electric Chair.mp3">Electric Chair</li>
                     <li data-src="https://zamwam.github.io/jwmp3/08 - Scared of Love.mp3">Scared of Love</li>
                     <li data-src="https://zamwam.github.io/jwmp3/09 - Lose You.mp3">Lose You</li>
                     <li data-src="https://zamwam.github.io/jwmp3/09 - Used To.mp3">Used To</li>
@@ -438,7 +437,7 @@
                     <li data-src="https://zamwam.github.io/jwmp3/In My Bag.mp3">My Bag</li>
                     <li data-src="https://zamwam.github.io/jwmp3/Infatuated.mp3">Infatuated</li>
                     <li data-src="https://zamwam.github.io/jwmp3/Juice WRLD - 6.mp3">6</li>
-                    <li data-src="https://zamwam.github.io/jwmp3/Juice WRLD - All Of Me.mp3">All Of ME</li>
+                    <li data-src="https://zamwam.github.io/jwmp3/Juice WRLD - All Of Me.mp3">All Of Me</li>
                     <li data-src="https://zamwam.github.io/jwmp3/Juice WRLD - All On My Own.m4a">All On My Own</li>
                     <li data-src="https://zamwam.github.io/jwmp3/Juice WRLD - All Talk.mp3">All Talk</li>
                     <li data-src="https://zamwam.github.io/jwmp3/Juice WRLD - All The Same.mp3">All The Same</li>

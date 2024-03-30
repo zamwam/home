@@ -81,3 +81,50 @@ function getCurrentSongTitle() {
     }
     return ''; // Return an empty string if the song title is not found
 }
+
+const shuffleBtn = document.getElementById('shuffleBtn');
+let shuffledPlaylist = [];
+
+shuffleBtn.addEventListener('click', shufflePlaylist);
+
+function shufflePlaylist() {
+    // Copy the playlist items to a new array to avoid modifying the original playlist
+    shuffledPlaylist = Array.from(playlistItems);
+
+    // Shuffle the copied playlist array
+    shuffledPlaylist.sort(() => Math.random() - 0.5);
+
+    // Highlight the first shuffled item
+    if (currentPlaylistItem) {
+        currentPlaylistItem.classList.remove('highlight');
+    }
+    shuffledPlaylist[0].classList.add('highlight');
+    currentPlaylistItem = shuffledPlaylist[0];
+
+    // Change the song to the first shuffled item
+    changeSong(shuffledPlaylist[0].getAttribute('data-src'));
+    togglePlayPause();
+    updateCurrentSongTitleDisplay();
+}
+
+function updateCurrentSongTitleDisplay(songTitle) {
+    currentSongTitleDisplay.innerHTML = songTitle;
+}
+
+for (let i = 0; i < playlistItems.length; i++) {
+    playlistItems[i].addEventListener('click', function () {
+        const songSrc = this.getAttribute('data-src');
+        const songTitle = this.innerHTML;
+
+        if (currentPlaylistItem) {
+            currentPlaylistItem.classList.remove('highlight');
+        }
+
+        this.classList.add('highlight');
+        currentPlaylistItem = this;
+
+        changeSong(songSrc);
+        togglePlayPause();
+        updateCurrentSongTitleDisplay(songTitle);
+    });
+}
