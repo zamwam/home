@@ -1,11 +1,8 @@
 body {
     border: 2px solid rgba(0, 0, 0, 0);
 }
-main h2 { 
+main h2, h3 { 
     background-color: #161616ad;
-}
-main a {
-    color: #522c03;
 }
 main img {
     border: 5px solid black;
